@@ -8,7 +8,14 @@ function App() {
     <div>
       <Nav />
       <Hero />
-      <Card />
+      <Card
+        img="./katie-zaferes.png"
+        rating={5.0}
+        reviewCount={6}
+        country=".RSA"
+        title="Life Lesson with katie Zaferes"
+        price={136}
+      />
     </div>
   );
 }

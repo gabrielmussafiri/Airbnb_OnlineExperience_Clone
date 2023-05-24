@@ -31,3 +31,33 @@ body {
 .hero--text {
   margin-top: 0;
 }
+.card--container {
+  /* position: relative; */
+  display: flex;
+  padding: 20px;
+  width: 176px;
+  height: 235px;
+  gap: 20px;
+}
+.card--text {
+  position: absolute;
+  width: 61px;
+  height: 20px;
+  margin-left: 10px;
+  background: #ffffff;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 200%;
+  text-align: center;
+}
+.card--image {
+  border-radius: 9px;
+  /* width: 100%; */
+}
+.card--review {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2px;
+}
