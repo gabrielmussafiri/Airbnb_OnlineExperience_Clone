@@ -1,7 +1,7 @@
 function Nav() {
   return (
     <div className="nav--container">
-      <img src="./Airbnb-logo.png" alt="logo" />
+      <img src="./Images/Airbnb-logo.png" alt="logo" />
     </div>
   );
 }

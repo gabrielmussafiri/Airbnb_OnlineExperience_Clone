@@ -2,20 +2,17 @@ import "./App.css";
 import Card from "./Components/Card";
 import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
+import data from "./Components/data";
 
 function App() {
+  const cardElement = data.map((item) => {
+    return <Card key={item.id} item={item} />;
+  });
   return (
     <div>
       <Nav />
       <Hero />
-      <Card
-        img="./katie-zaferes.png"
-        rating={5.0}
-        reviewCount={6}
-        country=".RSA"
-        title="Life Lesson with katie Zaferes"
-        price={136}
-      />
+      <section className="card-list">{cardElement}</section>
     </div>
   );
 }

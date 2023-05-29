@@ -1,21 +1,24 @@
 function Card(props) {
+  let badgeText;
+  if (props.item.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.item.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <div className="card--container">
-      {/* card 1 */}
-      <div className="card">
-        <p className="card--text">SOLD</p>
-        <img src={props.img} alt="katie" className="card--image" />
-        <div className="card--review">
-          <img src="star.png" alt="star" />
-          <p>{props.rating}</p>
-          <p>{props.reviewCount}</p>
-          <p>{props.country}</p>
-        </div>
-        <p>Life lessons with Katie Zaferes</p>
-        <p>
-          From {props.price} <span>/person</span>
-        </p>
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img src={props.item.coverImg} alt="katie" className="card--image" />
+      <div className="card--review">
+        <img src="./Images/star.png" alt="star" className="card--star" />
+        <p>{props.item.rating}</p>
+        <p className="gray">{props.item.reviewCount}</p>
+        <p className="gary">{props.item.location}</p>
       </div>
+      <p>{props.item.title}</p>
+      <p className="card--title">
+        From ${props.item.price} <span>/person</span>
+      </p>
     </div>
   );
 }
